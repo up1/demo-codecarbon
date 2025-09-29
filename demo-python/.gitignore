@@ -1,0 +1,6 @@
+demo/
+credentials.json
+data.csv
+data.parquet
+emissions.csv
+powermetrics_log.txt
