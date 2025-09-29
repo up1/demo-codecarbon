@@ -1,0 +1,20 @@
+services:
+  rest:
+    build:
+      context: .
+      dockerfile: Dockerfile.rest
+    ports:
+    - "8080:8080"
+  grpc:
+    build:
+      context: .
+      dockerfile: Dockerfile.grpc
+    ports:
+    - "50051:50051"
+  bench:
+    build:
+      context: .
+      dockerfile: Dockerfile.bench
+    depends_on:
+    - rest
+    - grpc
