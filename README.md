@@ -3,10 +3,13 @@
 ## 1. Working with Python and codecarbon
 * https://github.com/mlco2/codecarbon
 ```
+# Install codecarbon on localhost
 $pip install codecarbon
 $export CODECARBON_API_KEY=<your-api-key>
+$codecarbon config
 $codecarbon monitor
 
+# Working with Python
 $cd demo-python
 # List
 $python demo01.py
