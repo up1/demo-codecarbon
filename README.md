@@ -29,7 +29,24 @@ $python demo-data-format.py
 
 ## Java and GraalVM with Spring Boot
 * https://www.graalvm.org/latest/reference-manual/native-image/guides/build-spring-boot-app-into-native-executable/
+* Reduce dependencies
+* Reduce startup time
+* Reduce memory
+
+With JAR
+```
+$./mvnw package
+$ls -lh ./target/demo-java-0.0.1-SNAPSHOT.jar
+
+$java -jar ./target/demo-java-0.0.1-SNAPSHOT.jar
+```
+
+With GraalVM (Don't need JRE)
 ```
 $cd demo-java
 $./mvnw -Pnative native:compile
+$ls -lh ./target/demo-java
+-rwxr-xr-x  1 somkiatpuisungnoen  staff    74M Sep 29 23:31 ./target/demo-java
+
+$./target/demo-java
 ```
